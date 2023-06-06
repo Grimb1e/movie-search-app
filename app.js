@@ -28,7 +28,3 @@ form.addEventListener("submit", (e) => {
   e.preventDefault();
   movieSearch();
 })
-
-searchbutton.addEventListener('click', () => {
-  movieSearch();
-})
