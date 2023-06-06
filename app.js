@@ -9,10 +9,10 @@ const movieSearch = async () => {
   try {
     const title = input.value;
     
-    if (title === "") {
-      movieDetail.innerHTML = "<p>Please enter a movie title. 🙏</p>";
+    if (title.trim().length < 3) {
+      movieDetail.innerHTML = "<p>Please enter at least 3 characters. 🙏</p>";
       movieDetail.style.backgroundColor = "#222";
-      return;
+      return; 
     }
     const response = await fetch(
       `https://www.omdbapi.com/?apikey=${apiKey}&t=${title}`
