@@ -9,7 +9,7 @@ const movieSearch = async () => {
   try {
     const title = input.value;
     const response = await fetch(
-      `http://www.omdbapi.com/?apikey=${apiKey}&t=${title}`
+      `https://www.omdbapi.com/?apikey=${apiKey}&t=${title}`
     );
     const data = await response.json();
     movieDetail.innerHTML = `<h2>Movie: ${data.Title}</h2>
